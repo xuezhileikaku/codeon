@@ -1,0 +1,63 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+	<title>测试codemirror页面</title>
+	<link rel="stylesheet" type="text/css" href="./lib/codemirror.css"/>
+	<script type="text/javascript" src="./lib/codemirror.js"></script>
+	<script type="text/javascript" src="./mode/javascript/javascript.js"></script>
+
+</head>
+<body>
+<h1>code demo</h1>
+<form>
+选择编程语言
+	<select name="chcode">
+		<option value="java">
+			java
+		</option>
+		<option value="htmlmixed">
+			html+css
+		</option>
+		<option value="js">
+			javascript
+		</option>
+	</select>
+	<textarea cols="14" rows="3" value="输入编程代码"  id="code" name="editor">
+		
+	</textarea>
+	<button onclick="">预览</button> 
+	<input type="submit" value="提交" />
+</form>
+
+<script type="text/javascript">
+/*//直接在body中使用
+//var myCodeMirror=CodeMirror(document.body,{lineNumbers:true});
+//在textarea中使用
+var myTextarea=document.getElementById('editor');
+var CodeMirrorEditor=CodeMirror.fromTextArea(myTextarea,{mode:"text/javascript",lineNumbers:true});
+var myCodeMirror = CodeMirror(document.body, {
+  value: "function myScript(){return 100;}\n",
+  mode:  "javascript",lineNumbers:true
+});
+//或者如下简便操作
+var myCodeMirror = CodeMirror(function(textarea) {
+  myTextArea.parentNode.replaceChild(textarea, myTextArea);
+}, {value: myTextArea.value});
+/*
+//多个textarea中使用
+var myTextarea1=document.getElementById('java');
+var CodeMirrorEditor=CodeMirror.fromTextArea(myTextarea1,{mode:"text/javascript",lineNumbers:true});
+var myTextarea2=document.getElementById('html');
+var CodeMirrorEditor=CodeMirror.fromTextArea(myTextarea2,{mode:"text/javascript",lineNumbers:true});
+var myTextarea3=document.getElementById('js');
+var CodeMirrorEditor=CodeMirror.fromTextArea(myTextarea3,{mode:"text/javascript",lineNumbers:true});
+
+ var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+        extraKeys: {"Ctrl-Space": "autocomplete"},
+      });*/
+var myTextarea=document.getElementById('code');
+var CodeMirrorEditor=CodeMirror.fromTextArea(myTextarea,{mode:"text/javascript",lineNumbers:true});
+
+</script>
+</body>
+</html>
